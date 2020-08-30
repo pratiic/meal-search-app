@@ -1,0 +1,79 @@
+header {
+	margin: 3rem 0 5rem 0;
+
+	.page-title {
+		text-align: center;
+		font-size: 4rem;
+		margin-bottom: 3rem;
+	}
+
+	.form {
+		@include flex(center, center);
+		.input-group {
+			height: 3.5rem;
+			@include flex(center, center);
+			font-size: 1.5rem;
+
+			input {
+				width: 40rem;
+				height: inherit;
+				padding: 1rem;
+				font-size: inherit;
+				border-top-left-radius: 3px;
+				border-bottom-left-radius: 3px;
+				border: none;
+				outline: none;
+				font-weight: 700;
+
+				&:focus {
+					border: 2px solid $primary-blue;
+				}
+			}
+
+			::-webkit-input-placeholder {
+				font-family: inherit;
+				font-size: inherit;
+				font-weight: inherit;
+				color: $dark-grey;
+			}
+
+			.search-button,
+			.random-button {
+				height: inherit;
+				padding: 0 1rem;
+				font-size: inherit;
+				background-color: $light-grey;
+				color: black;
+				@include flex(center, center);
+				cursor: pointer;
+			}
+
+			.search-button {
+				border: none;
+				outline: none;
+				border-top-right-radius: 3px;
+				border-bottom-right-radius: 3px;
+				margin-right: 1rem;
+
+				&:hover {
+					opacity: 0.9;
+				}
+			}
+
+			.random-button {
+				border-radius: 3px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	header {
+		.form {
+			.input-group {
+				height: 4rem;
+				font-size: 2rem;
+			}
+		}
+	}
+}

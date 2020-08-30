@@ -1,0 +1,25 @@
+.ingredients {
+	max-width: 70rem;
+	margin: auto;
+
+	h3 {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.ingredients-main {
+		@include flex(center, center);
+		flex-wrap: wrap;
+
+		.ingredient {
+			//flex-basis: 20rem;
+			margin: 1rem;
+			background-color: $primary-blue;
+			color: white;
+			font-size: 1.5rem;
+			font-weight: 700;
+			padding: 1rem;
+			border-radius: 3px;
+		}
+	}
+}

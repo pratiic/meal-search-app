@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+			crossorigin="anonymous"
+		/>
+
+		<!-- <link
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/> -->
+		<link rel="stylesheet" href="dist/css/style.css" />
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header>
+			<!-- PAGE TITLE -->
+			<h1 class="page-title capitalize">meal finder</h1>
+
+			<!-- SEARCH BAR -->
+			<form class="form mb-2">
+				<div class="input-group">
+					<input
+						type="text"
+						placeholder="Search for meals or keywords..."
+						class="meal-search-bar"
+					/>
+					<button type="submit" class="search-button">
+						<i class="fas fa-search"></i>
+					</button>
+					<i class="fas fa-random random-button"></i>
+				</div>
+			</form>
+
+			<div class="alert"></div>
+		</header>
+
+		<!-- MEAL LIST -->
+		<div class="meal-list"></div>
+
+		<!-- MEAL DETAILS -->
+
+		<div class="meal-details">
+			<!-- <h1 class="meal-name capitalize"></h1>
+			<div class="meal-image-container">
+				<img src="" alt="" class="meal-image" />
+			</div>
+			<p class="meal-recipe"></p> -->
+			<!-- <div class="ingredients">
+				<div class="ingredient"></div>
+			</div> -->
+		</div>
+
+		<script type="module" src="src/javascript/index.js"></script>
+	</body>
+</html>

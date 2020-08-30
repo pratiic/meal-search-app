@@ -1,0 +1,343 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: #181818;
+  color: #efefef;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+.button {
+  padding: 0.5rem 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.45rem;
+  background-color: transparent;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 150ms ease-in;
+  transition: background-color 150ms ease-in;
+}
+
+.button:hover {
+  box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.4);
+  background-color: black;
+  color: white;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+header {
+  margin: 3rem 0 5rem 0;
+}
+
+header .page-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+header .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .form .input-group {
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+header .form .input-group input {
+  width: 40rem;
+  height: inherit;
+  padding: 1rem;
+  font-size: inherit;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+
+header .form .input-group input:focus {
+  border: 2px solid #007bff;
+}
+
+header .form .input-group ::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: #181818;
+}
+
+header .form .input-group .search-button,
+header .form .input-group .random-button {
+  height: inherit;
+  padding: 0 1rem;
+  font-size: inherit;
+  background-color: #efefef;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .form .input-group .search-button {
+  border: none;
+  outline: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-right: 1rem;
+}
+
+header .form .input-group .search-button:hover {
+  opacity: 0.9;
+}
+
+header .form .input-group .random-button {
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 1000px) {
+  header .form .input-group {
+    height: 4rem;
+    font-size: 2rem;
+  }
+}
+
+.meal-list {
+  max-width: 75%;
+  overflow-x: hidden;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.meal-list .meal {
+  border: 5px solid #007bff;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  max-height: 40rem;
+  max-width: 40rem;
+}
+
+.meal-list .meal .meal-image {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.meal-list .meal .meal-name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+.meal-list .meal::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+.meal-list .meal:hover::after {
+  opacity: 0.5;
+}
+
+.meal-list .meal:hover .meal-name {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .meal-list {
+    max-width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .meal-list {
+    max-width: 35%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .meal-list .meal {
+    border: 3px solid #007bff;
+  }
+}
+
+.alert {
+  width: 30rem;
+  background-color: rgba(255, 0, 0, 0.589);
+  padding: 1rem;
+  color: white;
+  border-radius: 3px;
+  text-transform: capitalize;
+  margin: auto;
+  display: none;
+  font-size: 1.7rem;
+}
+
+.meal-details {
+  max-width: 75%;
+  margin: auto;
+  overflow-x: hidden;
+  padding: 3rem 0;
+}
+
+.meal-details .meal-name {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.meal-details .meal-image-container {
+  max-width: 40rem;
+  height: 40rem;
+  margin: 3rem auto;
+}
+
+.meal-details .meal-image-container .meal-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.meal-details .recipe-info {
+  max-width: 40rem;
+  margin: 3rem auto;
+  border: 2px dashed #007bff;
+  padding: 1rem 0;
+}
+
+.meal-details .recipe-info p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.meal-details .meal-recipe {
+  max-width: 70rem;
+  margin: 3rem auto;
+  font-size: 1.8rem;
+}
+
+.ingredients {
+  max-width: 70rem;
+  margin: auto;
+}
+
+.ingredients h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.ingredients .ingredients-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ingredients .ingredients-main .ingredient {
+  margin: 1rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 3px;
+}

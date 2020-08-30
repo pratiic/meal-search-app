@@ -1,0 +1,43 @@
+.meal-details {
+	max-width: 75%;
+	margin: auto;
+	overflow-x: hidden;
+	padding: 3rem 0;
+
+	.meal-name {
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	.meal-image-container {
+		max-width: 40rem;
+		height: 40rem;
+		margin: 3rem auto;
+
+		.meal-image {
+			height: 100%;
+			width: 100%;
+			border-radius: 3px;
+		}
+	}
+
+	.recipe-info {
+		max-width: 40rem;
+		margin: 3rem auto;
+
+		border: 2px dashed $primary-blue;
+		padding: 1rem 0;
+
+		p {
+			font-size: 2.5rem;
+			font-weight: 700;
+			text-align: center;
+		}
+	}
+
+	.meal-recipe {
+		max-width: 70rem;
+		margin: 3rem auto;
+		font-size: 1.8rem;
+	}
+}
